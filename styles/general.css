@@ -1,0 +1,52 @@
+/* Definitions */
+/* ---------------------------------------------------------------- */
+
+:root {
+	--COLOR_LIGHT: #e2dfff;
+	--COLOR_GRAY: #23252d;
+	--COLOR_DARK: #111115;
+	--COLOR_DARK_LIGHT: #1f1f26;
+	--COLOR_STYLE: #7772ff;
+	--COLOR_STYLE_LIGHT: #b7aeff;
+}
+
+/* General */
+/* ---------------------------------------------------------------- */
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--COLOR_DARK);
+	box-sizing: border-box;
+}
+
+a,
+p,
+h1,
+h2 {
+	color: var(--COLOR_LIGHT);
+	margin: 0px;
+	font-family: "Radiance";
+	letter-spacing: 1px;
+	text-shadow: -1px -1px 4px var(--COLOR_DARK), 1px 1px 4px var(--COLOR_DARK);
+}
+
+/* Main */
+/* ---------------------------------------------------------------- */
+
+#Background {
+	position: fixed;
+	min-width: 100vw;
+	min-height: 100vh;
+	aspect-ratio: 21 / 9;
+	object-fit: cover;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 2s ease;
+}

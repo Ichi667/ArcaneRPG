@@ -1,0 +1,15 @@
+{
+  "name": "hexed_path_info",
+  "version": "1.0.0",
+  "description": "Dota 2 Custom Game Details.",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": ["html", "css"],
+  "author": "WVW",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "11.2.0"
+  }
+}

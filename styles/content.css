@@ -1,0 +1,188 @@
+/* Content */
+/* ---------------------------------------------------------------- */
+
+#Content {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: auto;
+	z-index: 1;
+	gap: clamp(16px, 16vw, 256px);
+
+	&.IsLoading {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	> header {
+		width: 80vw;
+		max-width: 1000px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: clamp(16px, 5vw, 32px);
+		padding-top: 96px;
+
+		> #GameLogo {
+			width: 100%;
+			max-width: 360px;
+		}
+
+		> #GameDefinition {
+			font-size: clamp(14px, 3vw, 24px);
+			text-align: center;
+			font-family: "Reaver";
+			font-weight: semi-bold;
+		}
+
+		> #Links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 8px;
+
+			> div {
+				padding: 6px 8px 6px 8px;
+				background-color: rgba(31, 31, 38, 0.75);
+				border-radius: 6px;
+				display: flex;
+				align-items: center;
+				box-shadow: -1px -1px 6px rgba(183, 174, 255, 0.2),
+					1px 1px 6px rgba(183, 174, 255, 0.2);
+
+				&:hover {
+					background-color: rgba(36, 36, 46, 0.95);
+					transition: background-color 0.3s ease-in-out;
+
+					> a {
+						color: var(--COLOR_STYLE);
+						transition: color 0.3s ease-in-out;
+					}
+				}
+
+				> a {
+					color: var(--COLOR_STYLE_LIGHT);
+					font-size: clamp(12px, 1vw, 16px);
+					font-weight: bold;
+					text-align: center;
+					text-decoration: none;
+					font-family: "Reaver";
+				}
+			}
+		}
+	}
+
+	> main {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8vw;
+
+		> #BlockGameFeatures {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 1200px;
+			gap: clamp(16px, 4vw, 64px);
+			padding: 0px 64px 0px 64px;
+			padding: 0px;
+			padding-left: clamp(8px, 4vw, 64px);
+			padding-right: clamp(8px, 4vw, 64px);
+
+			> h2 {
+				font-family: "Reaver";
+				font-size: clamp(18px, 5vw, 36px);
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+			> #BlockGameFeaturesContainer {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 32px;
+			}
+		}
+
+		> #BlockDevStage {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 900px;
+			padding: 32px;
+			gap: 16px;
+			background-image: radial-gradient(
+				circle,
+				#000000 0%,
+				#00000000 20%
+			);
+
+			> h2 {
+				color: var(--COLOR_STYLE);
+				font-family: "Reaver";
+				font-size: clamp(22px, 4vw, 36px);
+				letter-spacing: 2px;
+			}
+
+			> p {
+				font-size: clamp(14px, 2vw, 18px);
+				text-align: center;
+			}
+
+			> .AuthorName {
+				font-size: clamp(12px, 2vw, 16px);
+				font-family: "reaver";
+				text-transform: uppercase;
+				font-weight: bold;
+				opacity: 0.5;
+			}
+		}
+
+		> #BlockGameMechanics {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.7);
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+			padding-top: clamp(32px, 4vw, 64px);
+			padding-bottom: clamp(32px, 4vw, 64px);
+
+			> #BlockGameMechanicsContent {
+				max-width: 1000px;
+				display: flex;
+				flex-direction: column;
+				gap: clamp(32px, 5vw, 64px);
+
+				> h2 {
+					font-family: "Reaver";
+					font-size: clamp(22px, 4vw, 36px);
+					text-transform: uppercase;
+				}
+
+				> #BlockGameMechanicsContainer {
+					display: flex;
+					flex-direction: column;
+					gap: clamp(16px, 4vw, 64px);
+				}
+			}
+		}
+
+		> #AuthorDetails {
+			text-align: center;
+			opacity: 0.25;
+			margin: 0 auto;
+			font-size: 14px;
+			margin: 16px;
+
+			> a {
+				text-decoration: none;
+				font-weight: bold;
+			}
+		}
+	}
+}

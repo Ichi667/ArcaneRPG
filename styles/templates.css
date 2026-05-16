@@ -1,0 +1,94 @@
+.TemplateGameFeatures {
+	width: 18vw;
+	max-width: 320px;
+	min-width: 250px;
+	gap: 8px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: radial-gradient(circle, #000000 0%, #00000000 100%);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 32px;
+	box-shadow: -1px -1px 6px rgba(183, 174, 255, 0.2),
+		1px 1px 6px rgba(183, 174, 255, 0.2);
+
+	> .GameFeaturesImage {
+		width: 100%;
+	}
+
+	> .GameFeaturesTitle {
+		color: var(--COLOR_STYLE_LIGHT);
+		font-size: clamp(14px, 1vw, 20px);
+		font-weight: 800;
+		font-family: "Reaver";
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	> .GameFeaturesText {
+		font-size: clamp(12px, 1.2vw, 18px);
+		font-family: "Radiance";
+		text-align: center;
+		letter-spacing: 0px;
+	}
+}
+
+.TemplateGameMechanics {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(2, auto);
+	gap: 8px;
+
+	> .GameMechanicsStatusContainer {
+		width: 105px;
+		padding: 6px 8px 6px 8px;
+		border-radius: 4px;
+		background-color: var(--COLOR_DARK);
+		box-shadow: -1px -1px 6px rgba(183, 174, 255, 0.2),
+			1px 1px 6px rgba(183, 174, 255, 0.2);
+
+		> .GameMechanicsStatus {
+			font-size: clamp(10px, 2vw, 12px);
+			text-transform: uppercase;
+			letter-spacing: 0px;
+			font-weight: bold;
+			text-align: center;
+
+			&.Completed {
+				color: rgb(129, 240, 129);
+			}
+
+			&.InDev {
+				color: var(--COLOR_STYLE);
+			}
+
+			&.Planning {
+				color: var(--COLOR_LIGHT);
+			}
+
+			&.Rework {
+				color: rgb(241, 190, 113);
+			}
+		}
+	}
+
+	> .GameMechanicsTitle {
+		color: var(--COLOR_STYLE_LIGHT);
+		text-transform: uppercase;
+		font-family: "Reaver";
+		font-size: clamp(16px, 2vw, 20px);
+	}
+
+	> .GameMechanicsContent {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		grid-column: 2;
+
+		> .GameMechanicsText {
+			font-size: clamp(10px, 1.5vw, 18px);
+		}
+	}
+}
